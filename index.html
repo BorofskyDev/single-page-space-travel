@@ -4,12 +4,66 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>SOLIT</title>
   </head>
   <body>
-    
+    <!-- <a href="#" class="skip-to-content">Skip to Content</a> -->
+    <section class="hero">
+      <!----------------------------->
+      <!--------NAVBAR SECTION------->
+      <!----------------------------->
 
-    
-    <script type="module" src="/public/src/js/main.js"></script>
+      <header class="primary-header flex">
+        <div>
+          <img
+            src="/static/icons/logo.svg"
+            alt="SOLIT logo, a circle with a diamon-star in the middle"
+            class="logo"
+          />
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+          <span class="sr-only" aria-expanded="false">Menu</span>
+        </button>
+
+        <!-- Navbar -->
+
+        <nav>
+          <ul
+            id="primary-navigation"
+            class="primary-navigation underline-indicators"
+            data-visible="false"
+          >
+            <li class="active">
+              <a href="#" class="ff-header uppercase text-light letter-spacing2"
+                ><span aria-hidden="true">00</span>Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="ff-header uppercase text-light letter-spacing-2"
+                ><span aria-hidden="true">01</span>Crew</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="ff-header uppercase text-light letter-spacing-2"
+                ><span aria-hidden="true">02</span>Destination</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="ff-header uppercase text-light letter-spacing-2"
+                ><span aria-hidden="true">03</span>Destination</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </section>
+
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

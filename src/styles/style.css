@@ -166,8 +166,19 @@ select {
   border: 0;
 }
 
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in;
+}
+
 .skip-to-content:focus {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 /* Colors */
@@ -184,7 +195,7 @@ select {
 }
 
 .bg-primary {
-    background-color: var(--primary)
+  background-color: var(--primary);
 }
 
 .bg-dark {
@@ -192,11 +203,11 @@ select {
 }
 
 .bg-accent {
-    background-color: var(--accent);
+  background-color: var(--accent);
 }
 
 .bg-secondary {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
 .text-dark {
@@ -212,11 +223,11 @@ select {
 }
 
 .text-secondary {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .text-black {
-    color: var(--black);
+  color: var(--black);
 }
 
 /* typography */
@@ -297,7 +308,7 @@ select {
 .numbered-title span {
   margin-right: 0.5em;
   font-weight: 700;
-  color: var(--secondary) ;
+  color: var(--secondary);
 }
 
 /********************/
@@ -307,7 +318,12 @@ select {
 
 /* text */
 .gradient-text {
-  background-image: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+  background-image: linear-gradient(
+    45deg,
+    var(--primary),
+    var(--secondary),
+    var(--accent)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -318,11 +334,23 @@ select {
 
 .gradient-text:hover,
 .gradient-text:focus {
-  background-image: linear-gradient(-45deg, var(--accent), var(--primary), var(--secondary) );
+  background-image: linear-gradient(
+    -45deg,
+    var(--accent),
+    var(--primary),
+    var(--secondary)
+  );
 }
 
 .gradient-text.active {
-  background-image: linear-gradient(75deg, var(--primary), var(--dark), var(--secondary), var(--dark), var(--accent));
+  background-image: linear-gradient(
+    75deg,
+    var(--primary),
+    var(--dark),
+    var(--secondary),
+    var(--dark),
+    var(--accent)
+  );
   text-shadow: 0 0 5px var(--primary);
   animation: animatedText 4s infinite alternate-reverse;
 }
@@ -404,23 +432,8 @@ select {
   filter: blur(1.5rem);
 }
 
-/* navigation */
-.primary-navigation {
-  --gap: 8rem;
-  --underline-gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-.primary-navigation a {
-  text-decoration: none;
-}
 
-.primary-navigation a > span {
-  font-weight: 700;
-  margin-right: 0.5em;
-}
 
 .underline-indicators > * {
   cursor: pointer;
